@@ -56,6 +56,32 @@
             </div>
         </div>
     </header>
+
+<!-- Portfolio Grid Section -->
+    <section id="portfolio" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/about/biblio-iso-grey.png" class="img-responsive img-centered" alt="">
+                    </a>
+                </div>
+ 
+                <div class="col-md-6 col-sm-6 portfolio-item">
+                    <div class="portfolio-caption">
+                        <h4>AI for Image Repositories</h4>
+                        <p class="text-muted">Open Source AI metadta enrichment and dsitribution</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 <!--
         {% for page in site.pages %}
           {% if page.title %}<a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>{% endif %}
