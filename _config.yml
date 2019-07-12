@@ -9,20 +9,20 @@ description: "Write an awesome description for your new site here. You can edit 
 
 # Team names, titles and social links
 people:
-- name: Kay Garland
+- name: Justin Kelly
   pic: 1
-  position: Lead Designer
+  position: Developer
   social:
     - title: twitter
       url: #
-    - title: facebook
+    - title: github
       url: #
-    - title: stack-overflow
+    - title: linkedin
       url: #
 
-- name: Larry Parker
+- name: State Library of Victoria
   pic: 2
-  position: Lead Marketer
+  position: Support and Funding
   social:
     - title: twitter
       url: #
@@ -31,9 +31,9 @@ people:
     - title: linkedin
       url: #
 
-- name: Diana Petersen
+- name: Swinburne University
   pic: 3
-  position: Lead Developer
+  position: Development Partner
   social:
     - title: twitter
       url: #
@@ -45,15 +45,11 @@ people:
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
   - title: twitter
-    url: http://twitter.com/jekyllrb
+    url: http://twitter.com/_justin_kelly
   - title: facebook
     url:
-  - title: stack-overflow
-    url: http://stackoverflow.com/questions/tagged/jekyll
-  - title: bitbucket 
-    url: http://bitbucket.org/jekyll
   - title: github
-    url: http://github.com/jekyll
+    url: https://github.com/justinkelly/biblio.ai
 
 # Postal address (add as many lines as necessary)
 address:
