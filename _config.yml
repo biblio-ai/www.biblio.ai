@@ -25,18 +25,18 @@ people:
   position: Support and Funding
   social:
     - title: twitter
-      url: #
+      url: https://twitter.com/Library_Vic
     - title: facebook
       url: #
     - title: linkedin
       url: #
 
 - name: Swinburne University
-  pic: 3
+  pic: swin-logo.jpg
   position: Development Partner
   social:
     - title: twitter
-      url: #
+      url: https://twitter.com/swinlib
     - title: facebook
       url: #
     - title: google-plus
