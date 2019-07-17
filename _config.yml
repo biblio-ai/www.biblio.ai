@@ -14,14 +14,14 @@ people:
   position: Developer
   social:
     - title: twitter
-      url: #
+      url: https://twitter.com/_justin_kelly
     - title: github
-      url: #
+      url: https://github.com/justinkelly/
     - title: linkedin
       url: #
 
 - name: State Library of Victoria
-  pic: 2
+  pic: slv-logo.png
   position: Support and Funding
   social:
     - title: twitter
