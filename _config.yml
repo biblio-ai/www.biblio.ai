@@ -10,7 +10,7 @@ description: "Write an awesome description for your new site here. You can edit 
 # Team names, titles and social links
 people:
 - name: Justin Kelly
-  pic: 1
+  pic: justinkelly.png
   position: Developer
   social:
     - title: twitter
@@ -18,7 +18,7 @@ people:
     - title: github
       url: https://github.com/justinkelly/
     - title: linkedin
-      url: #
+      url: https://www.linkedin.com/in/justinkellyau
 
 - name: State Library of Victoria
   pic: slv-logo.jpg
