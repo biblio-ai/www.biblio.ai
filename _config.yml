@@ -19,6 +19,8 @@ people:
       url: https://github.com/justinkelly/
     - title: linkedin
       url: https://www.linkedin.com/in/justinkellyau
+    - title: rss
+      url: https://justin.kelly.org.au
 
 - name: State Library of Victoria
   pic: slv-logo.jpg
@@ -27,9 +29,11 @@ people:
     - title: twitter
       url: https://twitter.com/Library_Vic
     - title: facebook
-      url: #
-    - title: linkedin
-      url: #
+      url: http://www.facebook.com/pages/Melbourne-Australia/State-Library-of-Victoria/32256104331
+    - title: instagram
+      url: http://instagram.com/library_vic
+    - title: rss
+      url: https://slv.vic.gov.au
 
 - name: Swinburne University Library
   pic: swin-logo.jpg
@@ -37,10 +41,8 @@ people:
   social:
     - title: twitter
       url: https://twitter.com/swinlib
-    - title: facebook
-      url: #
-    - title: google-plus
-      url: #
+    - title: rss
+      url: https://swin.edu.au/lib
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
