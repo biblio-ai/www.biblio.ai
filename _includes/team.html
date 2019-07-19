@@ -22,6 +22,13 @@
                                 </a>
                             </li>
                             {% endfor %}
+                            {% for network in member.network %}
+                            <li>
+                                <a href="{{ network.url }}">
+                                    <i class="fas fa-{{ network.title }}"></i>
+                                </a>
+                            </li>
+                            {% endfor %}
 
                         </ul>
                     </div>

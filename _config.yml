@@ -19,6 +19,7 @@ people:
       url: https://github.com/justinkelly/
     - title: linkedin
       url: https://www.linkedin.com/in/justinkellyau
+  network:
     - title: rss
       url: https://justin.kelly.org.au
 
@@ -29,9 +30,10 @@ people:
     - title: twitter
       url: https://twitter.com/Library_Vic
     - title: facebook
-      url: http://www.facebook.com/pages/Melbourne-Australia/State-Library-of-Victoria/32256104331
+      url: https://www.facebook.com/pages/Melbourne-Australia/State-Library-of-Victoria/32256104331
     - title: instagram
-      url: http://instagram.com/library_vic
+      url: https://instagram.com/library_vic
+  network:
     - title: rss
       url: https://slv.vic.gov.au
 
@@ -41,17 +43,19 @@ people:
   social:
     - title: twitter
       url: https://twitter.com/swinlib
+  network:
     - title: rss
       url: https://swin.edu.au/lib
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
   - title: twitter
-    url: http://twitter.com/_justin_kelly
-  - title: facebook
-    url:
+    url: https://twitter.com/_justin_kelly
   - title: github
     url: https://github.com/justinkelly/biblio.ai
+social:
+  - title: rss
+    url: https://biblio.ai/atom.xml
 
 # Postal address (add as many lines as necessary)
 address:
