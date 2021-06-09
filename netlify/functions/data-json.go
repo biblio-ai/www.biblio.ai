@@ -19,7 +19,7 @@ func handler(request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResp
         blah := string(data)
 	return &events.APIGatewayProxyResponse{
 		StatusCode:        200,
-		Headers:           map[string]string{"Content-Type": "text/plain"},
+		Headers:           map[string]string{"Content-Type": "text/json"},
 		MultiValueHeaders: http.Header{"Set-Cookie": {"Ding", "Ping"}},
                 Body:              blah,
 		IsBase64Encoded:   false,
