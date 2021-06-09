@@ -4,7 +4,6 @@ import (
   	"github.com/aws/aws-lambda-go/events"
 	"github.com/aws/aws-lambda-go/lambda"
 	"net/http"
-	"fmt"
 	"log"
 	"os"
 	"io/ioutil"
@@ -13,12 +12,12 @@ func handler(request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResp
 	// read all response body
 	data := Request( "https://hgrqtmovrbvpvxjqungh.supabase.co/rest/v1/item?select=id,url,item_adult(value,score),item_brand(value,score),item_category(value,score),item_celebrity(value,score),item_color(black_and_white,accent_color,dominant_color_background,dominant_color_foreground,dominant_colors),item_description(value,score),item_face(gender,age),item_landmark(value,score),item_object(value,score),item_racy(value,score),item_tag(value,score),item_text(line,value),item_text_entity(value,match_text,text_type,text_sub_type,text_score),item_text_key_phrase(value),item_text_language(value,code,score),item_text_sentiment(score)&and=(id.eq.beec7a1a-bdc1-41dc-b7e1-5c15565c3efc)" )
 	// print `data` as a string
-	fmt.Printf( "%s\n", data )
+        blah := string(data)
 	return &events.APIGatewayProxyResponse{
 		StatusCode:        200,
 		Headers:           map[string]string{"Content-Type": "text/plain"},
 		MultiValueHeaders: http.Header{"Set-Cookie": {"Ding", "Ping"}},
-		Body:              data,
+                Body:              blah,
 		IsBase64Encoded:   false,
 	}, nil
 }
