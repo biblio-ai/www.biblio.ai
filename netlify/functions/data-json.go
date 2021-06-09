@@ -41,6 +41,7 @@ func Request(url string) []byte {
         log.Fatal(err)
     }
     req.Header.Set("apikey",  os.Getenv("SUPABASE_API_KEY"))
+    req.Header.Set("Accept",  "application/vnd.pgrst.object+json")
     resp, err := http.DefaultClient.Do(req)
     if err != nil {
         log.Fatal(err)
