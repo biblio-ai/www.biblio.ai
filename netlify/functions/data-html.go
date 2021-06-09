@@ -45,6 +45,7 @@ for _, name := range result.Array() {
                 blah = blah + "<td>Item tag:</td><td>"+name.String()+"</td>"
                 blah = blah + "</tr>"
 }
+        blah = blah + "<tr>"
         blah = blah + "<td><b>Item object:</b></td><td></td>"
         blah = blah + "</tr>"
         result_obj := gjson.Get(string(data), "item_object.#.value")
@@ -53,12 +54,22 @@ for _, name := range result_obj.Array() {
                 blah = blah + "<td>Item object:</td><td>"+name.String()+"</td>"
                 blah = blah + "</tr>"
 }
+        blah = blah + "<tr>"
         blah = blah + "<td><b>Item text:</b></td><td></td>"
         blah = blah + "</tr>"
         result_text := gjson.Get(string(data), "item_text.#.value")
 for _, name := range result_text.Array() {
                 blah = blah + "<tr>"
                 blah = blah + "<td>Item description:</td><td>"+name.String()+"</td>"
+                blah = blah + "</tr>"
+}
+        blah = blah + "<tr>"
+        blah = blah + "<td><b>Item text key phrases:</b></td><td></td>"
+        blah = blah + "</tr>"
+        result_text_key := gjson.Get(string(data), "item_text_key_phrase.#.value")
+for _, name := range result_text_key.Array() {
+                blah = blah + "<tr>"
+                blah = blah + "<td>Key phrase:</td><td>"+name.String()+"</td>"
                 blah = blah + "</tr>"
 }
         blah = blah + "</table>"
