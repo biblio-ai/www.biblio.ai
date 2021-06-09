@@ -37,10 +37,26 @@ func handler(request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResp
         blah = blah + "<td>Item Score:</td><td>"+gjson.Get(string(data), "item_description.0.score").String()+"</td>"
         blah = blah + "</tr>"
         blah = blah + "<tr>"
+        blah = blah + "<td><b>Item tag:</b></td><td></td>"
+        blah = blah + "</tr>"
+        result := gjson.Get(string(data), "item_tag.#.value")
+for _, name := range result.Array() {
+                blah = blah + "<tr>"
+                blah = blah + "<td>Item tag:</td><td>"+name.String()+"</td>"
+                blah = blah + "</tr>"
+}
+        blah = blah + "<td><b>Item object:</b></td><td></td>"
+        blah = blah + "</tr>"
+        result_obj := gjson.Get(string(data), "item_object.#.value")
+for _, name := range result_obj.Array() {
+                blah = blah + "<tr>"
+                blah = blah + "<td>Item object:</td><td>"+name.String()+"</td>"
+                blah = blah + "</tr>"
+}
         blah = blah + "<td><b>Item text:</b></td><td></td>"
         blah = blah + "</tr>"
-        result := gjson.Get(string(data), "item_text.#.value")
-for _, name := range result.Array() {
+        result_text := gjson.Get(string(data), "item_text.#.value")
+for _, name := range result_text.Array() {
                 blah = blah + "<tr>"
                 blah = blah + "<td>Item description:</td><td>"+name.String()+"</td>"
                 blah = blah + "</tr>"
