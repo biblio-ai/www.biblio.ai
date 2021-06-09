@@ -7,7 +7,7 @@ import (
 	"log"
 	"os"
 	"io/ioutil"
-        "github.com/Jeffail/gabs"
+        "github.com/tidwall/gjson"
 )
 func handler(request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse, error) {
 	// read all response body
@@ -18,19 +18,16 @@ func handler(request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResp
 	data := Request( "https://hgrqtmovrbvpvxjqungh.supabase.co/rest/v1/item?select=id,url,item_adult(value,score),item_brand(value,score),item_category(value,score),item_celebrity(value,score),item_color(black_and_white,accent_color,dominant_color_background,dominant_color_foreground,dominant_colors),item_description(value,score),item_face(gender,age),item_landmark(value,score),item_object(value,score),item_racy(value,score),item_tag(value,score),item_text(line,value),item_text_entity(value,match_text,text_type,text_sub_type,text_score),item_text_key_phrase(value),item_text_language(value,code,score),item_text_sentiment(score)&and=(id.eq."+uuid+")" )
 	// print `data` as a string
         //blah := string(data)
-	jsonParsed, err := gabs.ParseJSON(data)
-	if err != nil {
-		panic(err)
-	}
+       // value := gjson.Get(string(data), "item_description.0.value")
         var blah string
-        var value string
         blah = "<table>"
         blah = blah + "<tr>"
-        value = jsonParsed.Path("item_description.value").Data().(string)
-        blah = blah + "<td>Item description:</td><td>"+value+"</td>"
+        blah = blah + "<td>Item description:</td><td>"+gjson.Get(string(data), "item_description.0.value").String()+"</td>"
         blah = blah + "</tr>"
         blah = blah + "<tr>"
-        blah = blah + "<td>Score:</td><td>"+jsonParsed.Path("item_description.score").Data().(string)+"</td>"
+        blah = blah + "<td>Item Score:</td><td>"+gjson.Get(string(data), "item_description.0.score").String()+"</td>"
+        blah = blah + "</tr>"
+        blah = blah + "</table>"
         // Iterating address objects
         /*
 	for key, child := range jsonParsed.Search("employees", "address").ChildrenMap() {
